@@ -1,4 +1,4 @@
-# metascience
+# metascience <img src="man/figures/logo.svg" align="right" height="139" alt="metascience logo" />
 
 Catalogue and shared infrastructure for a set of open, independent tools that study research: how it is produced and assessed, whether it is done and communicated responsibly, and whether it can be checked and reproduced.
 
