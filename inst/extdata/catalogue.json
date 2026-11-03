@@ -157,13 +157,13 @@
       "kind": ["r-package"],
       "role": "Forensic scientometrics, with a paper mills module: publication, citation, authorship and affiliation anomaly signals, evidence management and reproducible case reports. A signal is never an accusation.",
       "r_package": "forsci",
-      "repository": null,
+      "repository": "https://github.com/pablosancheznunez/forsci",
       "url": null,
       "doi": null,
-      "maturity": "planned",
+      "maturity": "prototype",
       "cran": "not_submitted",
       "frozen": false,
-      "notes": "Phase 2. Consumes reproimage for image signals and the shared evidence levels of this package."
+      "notes": "Five signals, paper mill screen, Retraction Watch linking, cases and reports. Validated on a simulated benchmark only. Image signals come from reproimage."
     },
     {
       "id": "researchreproducibility",

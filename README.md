@@ -13,7 +13,7 @@ Status: **prototype** (not yet released).
 | | [academiccareer](https://github.com/pablosancheznunez/academiccareer) | Descriptive career profiles: timelines, contributions, transitions | implemented | submitted |
 | Integrity and governance | [aitrail](https://github.com/pablosancheznunez/aitrail) | Document, verify and disclose AI use in research | implemented | submitted |
 | | [scicomm](https://github.com/pablosancheznunez/scicomm) | Fidelity and audience fit in science communication | implemented | submitted |
-| | forsci | Forensic scientometrics and paper mills: signals, never accusations | planned | – |
+| | [forsci](https://github.com/pablosancheznunez/forsci) | Forensic scientometrics and paper mills: signals, never accusations | prototype | – |
 | Reproducibility and quality | [reproimage](https://github.com/pablosancheznunez/reproimage) | Integrity and provenance checks for scientific images | implemented | submitted |
 | | [REPRO2IMPACT](https://github.com/pablosancheznunez/repro2impact) | Reproducibility indicators and impact: research project | prototype | – |
 | | researchreproducibility | Reproducibility audits of projects and articles | planned | – |

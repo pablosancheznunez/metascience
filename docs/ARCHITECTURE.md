@@ -18,7 +18,7 @@
                      │ same catalogues, same expected outputs
    ┌─────────────────┴──────────────────────────────┐
    R packages:  openresearchmetrics · narrativecv · academiccareer · aitrail
-                scicomm · reproimage · forsci* · researchreproducibility*
+                scicomm · reproimage · forsci · researchreproducibility*
                      │ depend on (new code only)
                 metascience: catalogue · identifiers · vocabularies · manifest
                      │
@@ -35,7 +35,7 @@
 | `metascience` | new (local, not yet on GitHub) | Catalogue, shared foundation, ecosystem docs and, later, the portal source. |
 | `openresearchmetrics` | existing; `r/` added | Same pattern as narrativecv and reproimage: web tool and R package side by side. |
 | `narrative-cv-crosswalk`, `academiccareer`, `aitrail`, `scicomm`, `reproimage` | existing, frozen | Unchanged. |
-| `forsci` | Phase 2 | Distinct methods, distinct ethical safeguards: its own package. Paper mills as a module inside. |
+| `forsci` | new (local) | Distinct methods, distinct ethical safeguards: its own package. Paper mills as a module inside. |
 | `researchreproducibility` | Phase 2 | Extracted from repro2impact's detectors. |
 | `research-tools-ops` | existing | Extended in Phase 5. |
 
@@ -51,7 +51,7 @@
 | 1 | Standards, governance, ADRs | Implemented (documents) |
 | 1 | CI for metascience | Implemented, not yet run on GitHub (repository not created) |
 | 1 | Portal foundation (pkgdown site from catalogue) | Planned |
-| 2 | forsci with paper mills module | Planned |
+| 2 | forsci with paper mills module | Prototype: 66 tests, R CMD check clean (1 expected NOTE); validated on simulated benchmark only |
 | 2 | researchreproducibility | Planned |
 | 3 | AI policy/disclosure corpus analysis (module) | Planned |
 | 3 | Research assessment integration (shared vocabulary) | Started: `ms_harmonise_status()` |
