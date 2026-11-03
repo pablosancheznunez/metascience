@@ -17,8 +17,9 @@
 **Decision.** The JavaScript engine stays the reference. The R package bundles byte-identical copies of the catalogue, recorded responses and expected report; its test requires an identical report; CI fails on drift.
 **Consequence.** A methodology change needs both implementations updated in one PR, reviewed by the maintainer.
 
-## ADR-0005 — No new packages for AI in research and science communication (2026-11-03)
-**Decision.** aitrail and scicomm already implement these components. Missing parts (policy and disclosure corpus analysis; institutional communication) become modules of those packages after CRAN acceptance, or of a new package only if their methods become clearly distinct.
+## ADR-0005 — No new package for science communication; aiinresearch for corpus-level AI analysis (2026-11-03, revised the same day)
+**Decision.** scicomm implements science communication evaluation; no `scicom` package. For AI in research, aitrail covers project-level logging, verification and disclosure writing. The analysis of disclosures across publications and of AI policies turned out to be a different method on a different unit (corpora of articles and policies, not one team's log), and aitrail is frozen while CRAN reviews it, so it lives in a new package, `aiinresearch`, prefix `air_`.
+**Consequence.** The two packages share the `ai_use_basis` vocabulary; aiinresearch measures only declared use and never infers AI authorship.
 
 ## ADR-0006 — Paper mills as a module of forsci; images from reproimage (2026-11-03)
 **Decision.** As specified, paper mills start inside `forsci`. Image duplication signals are computed by reproimage, not re-implemented.

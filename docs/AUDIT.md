@@ -71,7 +71,7 @@ neuroconsumer, uxlearn, visualbrief (your instruction); abfunnel (marketing expe
 | A2 NarrativeCV | narrativecv + academiccareer | Integrate by reference (frozen). |
 | A3 forsci | – | Phase 2, new package. |
 | A4 Paper mills | – | Phase 2, module of forsci; image signals from reproimage. |
-| B1 AI in research | aitrail | Integrate (frozen); policy/disclosure analysis planned. |
+| B1 AI in research | aitrail | Integrate (frozen); corpus-level disclosure and policy analysis in the new `aiinresearch` (Phase 3, see ADR-0005). |
 | B2 Scientific communication | scicomm | Integrate (frozen). No `scicom` package. |
 | B3 Research assessment | Spread over ORM, narrativecv, academiccareer | Shared vocabulary in `metascience`; no new package. |
 | C1 Reproducibility | repro2impact detectors, reproimage | Phase 2, `researchreproducibility` from repro2impact. |

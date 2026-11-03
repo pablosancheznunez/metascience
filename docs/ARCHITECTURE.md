@@ -18,7 +18,7 @@
                      │ same catalogues, same expected outputs
    ┌─────────────────┴──────────────────────────────┐
    R packages:  openresearchmetrics · narrativecv · academiccareer · aitrail
-                scicomm · reproimage · forsci · researchreproducibility
+                scicomm · reproimage · forsci · researchreproducibility · aiinresearch
                      │ depend on (new code only)
                 metascience: catalogue · identifiers · vocabularies · manifest
                      │
@@ -53,7 +53,7 @@
 | 1 | Portal foundation (pkgdown site from catalogue) | Planned |
 | 2 | forsci with paper mills module | Prototype: 66 tests, R CMD check clean (1 expected NOTE); validated on simulated benchmark only |
 | 2 | researchreproducibility | Prototype: 66 tests, R CMD check clean (1 expected NOTE); detectors identical to repro2impact 1.1.0 |
-| 3 | AI policy/disclosure corpus analysis (module) | Planned |
+| 3 | aiinresearch: AI disclosures in articles and AI policies | Prototype: 53 tests, R CMD check clean (expected NOTEs); synthetic validation only |
 | 3 | Research assessment integration (shared vocabulary) | Started: `ms_harmonise_status()` |
 | 4 | Shiny interfaces per tool, linked from the portal | Planned |
 | 5 | AI-assisted maintenance in research-tools-ops | Partly exists (CRAN watch, auto-release); AI layer planned |

@@ -76,6 +76,21 @@
       "notes": "Covers declared and verified AI use by a research team. Analysis of AI policies and disclosures across publications is planned as a separate component."
     },
     {
+      "id": "aiinresearch",
+      "name": "aiinresearch",
+      "domain": "integrity_governance",
+      "kind": ["r-package"],
+      "role": "Declared use of AI in research: disclosure statements in article texts (tools, purposes, non-use, oversight), coding of journal and institutional AI policies on a ten-dimension codebook, and corpus summaries. Declared use only; no inference of AI authorship.",
+      "r_package": "aiinresearch",
+      "repository": "https://github.com/pablosancheznunez/aiinresearch",
+      "url": null,
+      "doi": null,
+      "maturity": "prototype",
+      "cran": "not_submitted",
+      "frozen": false,
+      "notes": "Corpus-level complement of aitrail (project-level). Rules tested on synthetic examples only; validation against hand-coded articles and policies pending."
+    },
+    {
       "id": "scicomm",
       "name": "scicomm",
       "domain": "integrity_governance",
