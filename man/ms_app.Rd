@@ -14,7 +14,7 @@ A Shiny app object; printing it launches the app.
 }
 \description{
 Launches one Shiny application with a section per tool: research
-indicators (openresearchmetrics), forensic scientometrics (forsci), AI
+indicators (openresearchmetrics), forensic scientometrics (FoSci), AI
 use in research (aiinresearch), reproducibility (researchreproducibility)
 and science communication (scicomm), plus the catalogue. Each section uses
 its package if it is installed and otherwise says how to install it, so

@@ -166,13 +166,13 @@
       "notes": null
     },
     {
-      "id": "forsci",
-      "name": "forsci",
+      "id": "fosci",
+      "name": "FoSci",
       "domain": "integrity_governance",
       "kind": ["r-package"],
       "role": "Forensic scientometrics, with a paper mills module: publication, citation, authorship and affiliation anomaly signals, evidence management and reproducible case reports. A signal is never an accusation.",
-      "r_package": "forsci",
-      "repository": "https://github.com/pablosancheznunez/forsci",
+      "r_package": "FoSci",
+      "repository": "https://github.com/pablosancheznunez/FoSci",
       "url": null,
       "doi": null,
       "maturity": "prototype",

@@ -21,8 +21,8 @@
 **Decision.** scicomm implements science communication evaluation; no `scicom` package. For AI in research, aitrail covers project-level logging, verification and disclosure writing. The analysis of disclosures across publications and of AI policies turned out to be a different method on a different unit (corpora of articles and policies, not one team's log), and aitrail is frozen while CRAN reviews it, so it lives in a new package, `aiinresearch`, prefix `air_`.
 **Consequence.** The two packages share the `ai_use_basis` vocabulary; aiinresearch measures only declared use and never infers AI authorship.
 
-## ADR-0006 — Paper mills as a module of forsci; images from reproimage (2026-11-03)
-**Decision.** As specified, paper mills start inside `forsci`. Image duplication signals are computed by reproimage, not re-implemented.
+## ADR-0006 — Paper mills as a module of FoSci; images from reproimage (2026-11-03)
+**Decision.** As specified, paper mills start inside `FoSci`. Image duplication signals are computed by reproimage, not re-implemented.
 
 ## ADR-0008 — Portal generated from the catalogue; one Shiny app with a module per tool (2026-11-03)
 **Context.** Phase 4 asks for a public portal and analytical interfaces that feel like one platform while each tool evolves independently.

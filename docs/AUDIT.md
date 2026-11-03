@@ -50,7 +50,7 @@ The specification describes `openresearchmetrics` as an R package. **It was a Ja
 
 ### reproimage — feeds forensic scientometrics and reproducibility
 - Exact, pixel and perceptual duplicate detection in eight orientations, RO-Crate provenance, R and Python. Reference image set with expected results.
-- **Decision:** image-integrity signals for paper mills are *not* re-implemented in `forsci`; forsci will call reproimage.
+- **Decision:** image-integrity signals for paper mills are *not* re-implemented in `FoSci`; FoSci will call reproimage.
 
 ### repro2impact — research project, seed of the reproducibility package
 - `targets` pipeline with versioned transparency detectors (`detector_version 1.1.0`: data, code, materials, preregistration, availability statements), protocol, preregistration, codebook, analyses with E-values and DiD.
@@ -69,8 +69,8 @@ neuroconsumer, uxlearn, visualbrief (your instruction); abfunnel (marketing expe
 | --- | --- | --- |
 | A1 OpenResearchMetrics | JS web tool | **Done in Phase 1:** R package in `openresearchmetrics/r` (prototype). Extend later. |
 | A2 NarrativeCV | narrativecv + academiccareer | Integrate by reference (frozen). |
-| A3 forsci | – | Phase 2, new package. |
-| A4 Paper mills | – | Phase 2, module of forsci; image signals from reproimage. |
+| A3 FoSci | – | Phase 2, new package. |
+| A4 Paper mills | – | Phase 2, module of FoSci; image signals from reproimage. |
 | B1 AI in research | aitrail | Integrate (frozen); corpus-level disclosure and policy analysis in the new `aiinresearch` (Phase 3, see ADR-0005). |
 | B2 Scientific communication | scicomm | Integrate (frozen). No `scicom` package. |
 | B3 Research assessment | Spread over ORM, narrativecv, academiccareer | Shared vocabulary in `metascience`; no new package. |

@@ -14,7 +14,7 @@ Status: **prototype** (not yet released).
 | Integrity and governance | [aitrail](https://github.com/pablosancheznunez/aitrail) | Document, verify and disclose AI use in research | implemented | submitted |
 | | [aiinresearch](https://github.com/pablosancheznunez/aiinresearch) | Declared AI use in articles and AI policies; never infers AI authorship | prototype | – |
 | | [scicomm](https://github.com/pablosancheznunez/scicomm) | Fidelity and audience fit in science communication | implemented | submitted |
-| | [forsci](https://github.com/pablosancheznunez/forsci) | Forensic scientometrics and paper mills: signals, never accusations | prototype | – |
+| | [FoSci](https://github.com/pablosancheznunez/FoSci) | Forensic scientometrics and paper mills: signals, never accusations | prototype | – |
 | Reproducibility and quality | [reproimage](https://github.com/pablosancheznunez/reproimage) | Integrity and provenance checks for scientific images | implemented | submitted |
 | | [REPRO2IMPACT](https://github.com/pablosancheznunez/repro2impact) | Reproducibility indicators and impact: research project | prototype | – |
 | | [researchreproducibility](https://github.com/pablosancheznunez/researchreproducibility) | Reproducibility audits of projects and articles | prototype | – |
@@ -42,7 +42,7 @@ install.packages("shiny")
 metascience::ms_app()
 ```
 
-Sections: open science indicators (openresearchmetrics), forensic scientometrics and paper mill screening (forsci), AI disclosures and AI policies (aiinresearch), readability (scicomm), project audits and article transparency (researchreproducibility). Uploaded files stay in the R session's temporary folder.
+Sections: open science indicators (openresearchmetrics), forensic scientometrics and paper mill screening (FoSci), AI disclosures and AI policies (aiinresearch), readability (scicomm), project audits and article transparency (researchreproducibility). Uploaded files stay in the R session's temporary folder.
 
 ## Shared foundation
 

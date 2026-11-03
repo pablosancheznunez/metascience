@@ -8,7 +8,7 @@ These describe how the existing packages are already built (narrativecv, academi
 - Versioned data (catalogues, crosswalks, vocabularies) in `inst/extdata/*.json`, each with its own version field.
 
 ## Naming
-- Every exported function has a short package prefix: `ms_`, `orm_`, `nc_`, `ac_`, `ait_`, `sc_`, `ri_`. New: `fs_` (forsci), `rr_` (researchreproducibility).
+- Every exported function has a short package prefix: `ms_`, `orm_`, `nc_`, `ac_`, `ait_`, `sc_`, `ri_`. New: `fs_` (FoSci), `rr_` (researchreproducibility).
 - snake_case; British spelling in prose (`Language: en-GB`); functions that normalise API responses are `<prefix>_normalise_<source>()` in new code.
 
 ## Dependencies

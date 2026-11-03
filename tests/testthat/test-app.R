@@ -13,15 +13,15 @@ test_that("the app builds with whatever packages are installed", {
 })
 
 test_that("missing packages get install instructions instead of a section", {
-  html <- as.character(missing_ui("forsci"))
+  html <- as.character(missing_ui("FoSci"))
   expect_match(html, "not installed")
-  expect_match(html, "pablosancheznunez/forsci", fixed = TRUE)
+  expect_match(html, "pablosancheznunez/FoSci", fixed = TRUE)
   expect_match(as.character(missing_ui("openresearchmetrics")), "subdir", fixed = TRUE)
 })
 
 test_that("the catalogue module renders the catalogue", {
   shiny::testServer(catalogue_server, {
-    expect_match(output$catalogue, "forsci")
+    expect_match(output$catalogue, "FoSci")
     expect_match(output$status, "metascience")
   })
 })
@@ -36,10 +36,10 @@ test_that("the openresearchmetrics module computes the example offline", {
   })
 })
 
-test_that("the forsci module computes signals on the benchmark", {
-  pkg <- "forsci"
+test_that("the FoSci module computes signals on the benchmark", {
+  pkg <- "FoSci"
   needs(pkg)
-  shiny::testServer(forsci_server, {
+  shiny::testServer(fosci_server, {
     session$setInputs(source = "sim", seed = 1, run = 1)
     expect_match(output$signals, "citation_stacking")
     expect_match(output$pm, "pattern")

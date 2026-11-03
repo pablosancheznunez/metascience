@@ -13,3 +13,4 @@
 ^_site$
 ^README\.md$
 ^site$
+^cran-comments\.md$

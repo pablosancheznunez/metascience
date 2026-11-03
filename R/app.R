@@ -1,7 +1,7 @@
 #' Interactive interfaces for the ecosystem
 #'
 #' Launches one Shiny application with a section per tool: research
-#' indicators (openresearchmetrics), forensic scientometrics (forsci), AI
+#' indicators (openresearchmetrics), forensic scientometrics (FoSci), AI
 #' use in research (aiinresearch), reproducibility (researchreproducibility)
 #' and science communication (scicomm), plus the catalogue. Each section uses
 #' its package if it is installed and otherwise says how to install it, so
@@ -30,8 +30,8 @@ app_modules <- function() {
   list(
     list(id = "orm", title = "Open science indicators", menu = "Science of science", pkg = "openresearchmetrics",
          ui = orm_ui, server = orm_server),
-    list(id = "forsci", title = "Forensic scientometrics", menu = "Research integrity", pkg = "forsci",
-         ui = forsci_ui, server = forsci_server),
+    list(id = "FoSci", title = "Forensic scientometrics", menu = "Research integrity", pkg = "FoSci",
+         ui = fosci_ui, server = fosci_server),
     list(id = "ai", title = "AI in research", menu = "Research integrity", pkg = "aiinresearch",
          ui = ai_ui, server = ai_server),
     list(id = "scicomm", title = "Science communication", menu = "Research integrity", pkg = "scicomm",
@@ -158,9 +158,9 @@ orm_server <- function(id) {
   })
 }
 
-# forsci --------------------------------------------------------------------
+# FoSci --------------------------------------------------------------------
 
-forsci_ui <- function(id) {
+fosci_ui <- function(id) {
   ns <- shiny::NS(id)
   shiny::sidebarLayout(
     shiny::sidebarPanel(
@@ -186,17 +186,17 @@ forsci_ui <- function(id) {
   )
 }
 
-forsci_server <- function(id) {
+fosci_server <- function(id) {
   shiny::moduleServer(id, function(input, output, session) {
     corpus <- shiny::eventReactive(input$run, {
-      if (input$source == "sim") return(fn("forsci", "fs_simulate")(seed = input$seed))
+      if (input$source == "sim") return(fn("FoSci", "fs_simulate")(seed = input$seed))
       shiny::validate(shiny::need(input$works, "Upload works.csv."))
       read <- function(f) if (is.null(f)) NULL else utils::read.csv(f$datapath, stringsAsFactors = FALSE)
-      tryCatch(fn("forsci", "fs_corpus")(read(input$works), read(input$authorships), read(input$references),
+      tryCatch(fn("FoSci", "fs_corpus")(read(input$works), read(input$authorships), read(input$references),
                                          provenance = list(source = "upload", file = input$works$name)),
                error = function(e) shiny::validate(conditionMessage(e)))
     })
-    signals <- shiny::reactive(fn("forsci", "fs_signals")(corpus()))
+    signals <- shiny::reactive(fn("FoSci", "fs_signals")(corpus()))
     output$signals <- shiny::renderTable({
       s <- signals()
       as.data.frame(s)[s$flagged %in% TRUE, c("signal", "unit_type", "unit_id", "detail", "evidence_level")]
@@ -207,15 +207,15 @@ forsci_server <- function(id) {
       s$alternatives <- gsub(" | ", "; ", s$alternatives, fixed = TRUE)
       s
     })
-    output$pm <- shiny::renderTable(fn("forsci", "fs_pm_screen")(corpus())[, c("work_id", "template_group", "tortured_phrases",
+    output$pm <- shiny::renderTable(fn("FoSci", "fs_pm_screen")(corpus())[, c("work_id", "template_group", "tortured_phrases",
                                                                               "retracted", "n_signals", "evidence_level")])
     output$validation_panel <- shiny::renderUI({
       if (is.null(attr(corpus(), "truth"))) return(NULL)
       panel("Validation against the planted cases", shiny::tableOutput(session$ns("validation")))
     })
-    output$validation <- shiny::renderTable(fn("forsci", "fs_validate")(signals(), attr(corpus(), "truth")))
-    output$report <- shiny::downloadHandler("forsci-signals.html", function(file) {
-      fn("forsci", "fs_report")(signals(), file, corpus = corpus())
+    output$validation <- shiny::renderTable(fn("FoSci", "fs_validate")(signals(), attr(corpus(), "truth")))
+    output$report <- shiny::downloadHandler("FoSci-signals.html", function(file) {
+      fn("FoSci", "fs_report")(signals(), file, corpus = corpus())
     })
   })
 }

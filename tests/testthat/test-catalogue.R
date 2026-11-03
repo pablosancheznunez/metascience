@@ -1,7 +1,7 @@
 test_that("the catalogue lists every component with valid fields", {
   cat_ <- ms_catalogue()
   expect_s3_class(cat_, "data.frame")
-  expect_true(all(c("openresearchmetrics", "narrativecv", "forsci") %in% cat_$id))
+  expect_true(all(c("openresearchmetrics", "narrativecv", "fosci") %in% cat_$id))
   expect_false(anyDuplicated(cat_$id) > 0)
   expect_true(all(cat_$domain %in% ms_domains()$id))
   expect_true(all(cat_$maturity %in% c("implemented", "implemented_not_validated",
