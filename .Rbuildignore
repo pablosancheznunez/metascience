@@ -12,3 +12,4 @@
 ^README\.Rmd$
 ^_site$
 ^README\.md$
+^site$

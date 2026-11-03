@@ -24,5 +24,11 @@
 ## ADR-0006 — Paper mills as a module of forsci; images from reproimage (2026-11-03)
 **Decision.** As specified, paper mills start inside `forsci`. Image duplication signals are computed by reproimage, not re-implemented.
 
+## ADR-0008 — Portal generated from the catalogue; one Shiny app with a module per tool (2026-11-03)
+**Context.** Phase 4 asks for a public portal and analytical interfaces that feel like one platform while each tool evolves independently.
+**Decision.** The portal is a static page built by `site/build.R` from `inst/extdata/catalogue.json` and published to GitHub Pages on every change to main, so the website cannot disagree with `ms_catalogue()`. The interfaces are one Shiny app, `ms_app()`, with one module (UI + server pair) per tool in `R/app.R`. Modules call their package by name only when it is installed, so no tool becomes a dependency of metascience and a missing tool shows install instructions instead of breaking the app. Shiny is a suggested package. The existing browser tools (OpenResearchMetrics, Narrative CV Crosswalk) stay where they are and are linked, not rebuilt.
+**Alternatives.** A Shiny app per repository (more deployments to maintain, no shared navigation); a JavaScript front end with a Plumber API (a server to run and secure, which ADR-0003 avoids until needed).
+**Consequence.** Deploying the app online needs a Shiny host (shinyapps.io, Posit Connect or a container); until one is chosen the app runs locally with `ms_app()`.
+
 ## ADR-0007 — Maintenance automation extends research-tools-ops (2026-11-03)
 **Decision.** The existing reusable workflows are the base for Phase 5. AI-assisted steps (failure analysis, draft PRs) are added there, constrained by the approval table in `GOVERNANCE.md` and by CODEOWNERS.

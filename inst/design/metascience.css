@@ -1,0 +1,75 @@
+/* Metascience design system: tokens shared by the portal and the
+   interfaces. Same palette as the OpenResearchMetrics web tool; status
+   colours follow the shared result_status vocabulary. */
+:root {
+  --ms-bg: #fbfaf8;
+  --ms-surface: #ffffff;
+  --ms-text: #1d1c1a;
+  --ms-muted: #5f5c57;
+  --ms-line: #e2dfda;
+  --ms-accent: #2457a6;
+  --ms-accent-soft: #e6edf8;
+  --ms-reported: #1f7a3d;
+  --ms-partial: #9a6400;
+  --ms-absent: #6b6863;
+  --ms-unverifiable: #b3261e;
+  --ms-font-ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ms-font-head: Georgia, "Times New Roman", serif;
+  --ms-font-mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --ms-radius: 6px;
+  --ms-gap: 1rem;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ms-bg: #171716; --ms-surface: #211f1e; --ms-text: #ece9e4; --ms-muted: #a7a29b;
+    --ms-line: #3a3734; --ms-accent: #8fb4ff; --ms-accent-soft: #1f2a3d;
+    --ms-reported: #6fcf8f; --ms-partial: #f0b44c; --ms-absent: #a7a29b; --ms-unverifiable: #ff8a80;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --ms-bg: #171716; --ms-surface: #211f1e; --ms-text: #ece9e4; --ms-muted: #a7a29b;
+  --ms-line: #3a3734; --ms-accent: #8fb4ff; --ms-accent-soft: #1f2a3d;
+  --ms-reported: #6fcf8f; --ms-partial: #f0b44c; --ms-absent: #a7a29b; --ms-unverifiable: #ff8a80;
+  color-scheme: dark;
+}
+
+body { background: var(--ms-bg); color: var(--ms-text); font-family: var(--ms-font-ui); line-height: 1.55; margin: 0; }
+h1, h2, h3 { font-family: var(--ms-font-head); font-weight: normal; line-height: 1.25; }
+a { color: var(--ms-accent); }
+code, pre { font-family: var(--ms-font-mono); font-size: .92em; }
+
+.ms-wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+.ms-header { border-bottom: 1px solid var(--ms-line); background: var(--ms-surface); }
+.ms-header .ms-wrap { display: flex; align-items: center; gap: .75rem; padding-top: .9rem; padding-bottom: .9rem; }
+.ms-brand { font-family: var(--ms-font-head); font-size: 1.35rem; color: var(--ms-text); text-decoration: none; }
+.ms-header nav { margin-left: auto; display: flex; gap: 1.1rem; flex-wrap: wrap; }
+.ms-header nav a { color: var(--ms-muted); text-decoration: none; }
+.ms-header nav a:hover { color: var(--ms-accent); }
+
+.ms-lede { font-size: 1.15rem; color: var(--ms-muted); max-width: 46rem; }
+.ms-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--ms-gap); }
+.ms-card { background: var(--ms-surface); border: 1px solid var(--ms-line); border-radius: var(--ms-radius); padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: .5rem; }
+.ms-card h3 { margin: 0; font-size: 1.15rem; }
+.ms-card p { margin: 0; color: var(--ms-muted); font-size: .95rem; }
+.ms-card .ms-links { margin-top: auto; display: flex; gap: .8rem; flex-wrap: wrap; font-size: .9rem; }
+
+.ms-badge { display: inline-block; font-size: .75rem; padding: .1rem .45rem; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; }
+.ms-badge.implemented { color: var(--ms-reported); }
+.ms-badge.implemented_not_validated, .ms-badge.prototype { color: var(--ms-partial); }
+.ms-badge.planned { color: var(--ms-absent); }
+.ms-badge.blocked { color: var(--ms-unverifiable); }
+.ms-badge.cran { color: var(--ms-accent); }
+.ms-status-reported { color: var(--ms-reported); }
+.ms-status-absent_in_sources, .ms-status-not_applicable { color: var(--ms-absent); }
+.ms-status-unverifiable { color: var(--ms-unverifiable); }
+
+.ms-principles { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--ms-gap); padding: 0; list-style: none; }
+.ms-principles li { border-left: 3px solid var(--ms-accent); padding: .2rem .8rem; }
+.ms-note { background: var(--ms-accent-soft); border-left: 4px solid var(--ms-accent); padding: .8rem 1rem; border-radius: 0 var(--ms-radius) var(--ms-radius) 0; }
+.ms-footer { border-top: 1px solid var(--ms-line); margin-top: 3rem; padding: 1.5rem 0; color: var(--ms-muted); font-size: .9rem; }
+
+table.ms-table { border-collapse: collapse; width: 100%; font-size: .9rem; background: var(--ms-surface); }
+table.ms-table th, table.ms-table td { border: 1px solid var(--ms-line); padding: .35rem .5rem; text-align: left; vertical-align: top; }
+.ms-scroll { overflow-x: auto; }

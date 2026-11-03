@@ -50,12 +50,14 @@
 | 1 | OpenResearchMetrics R package | Prototype: identical report to the web tool on the regression case; on branch `r-package`, not pushed |
 | 1 | Standards, governance, ADRs | Implemented (documents) |
 | 1 | CI for metascience | Implemented, not yet run on GitHub (repository not created) |
-| 1 | Portal foundation (pkgdown site from catalogue) | Planned |
+| 1 | Portal foundation | Superseded by Phase 4 portal |
 | 2 | forsci with paper mills module | Prototype: 66 tests, R CMD check clean (1 expected NOTE); validated on simulated benchmark only |
 | 2 | researchreproducibility | Prototype: 66 tests, R CMD check clean (1 expected NOTE); detectors identical to repro2impact 1.1.0 |
 | 3 | aiinresearch: AI disclosures in articles and AI policies | Prototype: 53 tests, R CMD check clean (expected NOTEs); synthetic validation only |
 | 3 | Research assessment integration (shared vocabulary) | Started: `ms_harmonise_status()` |
-| 4 | Shiny interfaces per tool, linked from the portal | Planned |
+| 4 | Portal built from the catalogue (`site/build.R`, GitHub Pages workflow) | Implemented; publishing needs GitHub Pages enabled on the repository |
+| 4 | `ms_app()`: one Shiny app, modules for openresearchmetrics, forsci, aiinresearch, scicomm, researchreproducibility | Prototype: module servers tested with shiny::testServer; runs locally, not deployed online |
+| 4 | Design system (`inst/design/`: tokens, light/dark, logo) | Implemented |
 | 5 | AI-assisted maintenance in research-tools-ops | Partly exists (CRAN watch, auto-release); AI layer planned |
 | 6 | Software papers (JOSS/rOpenSci review), benchmarks, reports | Planned |
 | – | Changes to frozen packages | Blocked by CRAN review |

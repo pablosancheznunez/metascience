@@ -32,6 +32,18 @@ ms_catalogue()          # every tool, its domain, maturity and CRAN status
 ms_status()             # which ecosystem packages are installed
 ```
 
+## Portal and interfaces
+
+- **Portal**: `site/build.R` builds a static page from the catalogue; the Pages workflow publishes it on every change.
+- **Interfaces**: one Shiny app with a section per tool, using whichever tools are installed:
+
+```r
+install.packages("shiny")
+metascience::ms_app()
+```
+
+Sections: open science indicators (openresearchmetrics), forensic scientometrics and paper mill screening (forsci), AI disclosures and AI policies (aiinresearch), readability (scicomm), project audits and article transparency (researchreproducibility). Uploaded files stay in the R session's temporary folder.
+
 ## Shared foundation
 
 ```r
