@@ -1,0 +1,38 @@
+{
+  "vocabulary_version": "0.1.0",
+  "vocabularies": {
+    "result_status": {
+      "description": "Common status of a result, whatever tool produced it. It records what the sources allowed to be said, never a judgement of the researcher or the output.",
+      "terms": [
+        {"id": "reported", "definition": "The sources answered and the result is reported with its evidence.", "may_be_read_as": "A result, within the coverage of the sources consulted."},
+        {"id": "absent_in_sources", "definition": "The sources answered and contain nothing relevant.", "may_be_read_as": "Not found in these sources. Never proof that the practice or contribution does not exist."},
+        {"id": "unverifiable", "definition": "A source failed or there was nothing to count, so the result cannot be established.", "may_be_read_as": "Unknown. Never zero, never no."},
+        {"id": "not_automatable", "definition": "No infrastructure can document this; only the person or a human assessor can.", "may_be_read_as": "Requires narrative or expert evidence."}
+      ],
+      "mappings": {
+        "openresearchmetrics": {"computed": "reported", "unverifiable": "unverifiable"},
+        "narrativecv": {"found": "reported", "partial": "reported", "not_found_in_sources": "absent_in_sources", "source_unavailable": "unverifiable", "no_automated_source": "not_automatable"},
+        "repro2impact": {"yes": "reported", "no": "absent_in_sources", "unverifiable": "unverifiable"}
+      }
+    },
+    "evidence_level": {
+      "description": "Strength of the evidence behind an integrity-related finding. Levels are not interchangeable: a lower level is never reported with the wording of a higher one.",
+      "terms": [
+        {"id": "signal", "definition": "A statistical or computational indicator departs from what is expected for comparable cases.", "may_be_read_as": "Worth a closer look. Has many innocent explanations; not evidence of misconduct."},
+        {"id": "pattern", "definition": "Several independent signals recur across records, time or actors.", "may_be_read_as": "A pattern that needs documentary verification and alternative explanations."},
+        {"id": "documentary", "definition": "Primary documents (publisher notices, data files, correspondence, images) support the finding.", "may_be_read_as": "Documented, pending independent assessment."},
+        {"id": "established", "definition": "An independent, competent body has reached a finding (retraction with stated cause, institutional or judicial decision).", "may_be_read_as": "Established by the cited body; cite it, do not restate it as the tool's own conclusion."}
+      ],
+      "mappings": {}
+    },
+    "ai_use_basis": {
+      "description": "How a statement about AI use in research is known.",
+      "terms": [
+        {"id": "declared", "definition": "Stated by the authors or the research team (disclosure, log, statement).", "may_be_read_as": "What the authors say they did."},
+        {"id": "inferred", "definition": "Estimated by a tool or analyst from indirect features of the text or process.", "may_be_read_as": "A probabilistic estimate. Automated AI-text detection is not proof of AI authorship."},
+        {"id": "verified", "definition": "Confirmed by direct evidence such as a contemporaneous log checked by a person.", "may_be_read_as": "Verified for the records examined."}
+      ],
+      "mappings": {}
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# Paths whose changes need the maintainer's review.
+/inst/extdata/ @pablosancheznunez
+/docs/GOVERNANCE.md @pablosancheznunez
+/.github/ @pablosancheznunez

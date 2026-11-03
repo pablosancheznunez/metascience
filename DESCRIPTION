@@ -1,0 +1,31 @@
+Package: metascience
+Title: Catalogue and Shared Infrastructure for Open Metascience Tools
+Version: 0.0.0.9000
+Authors@R:
+    person("Pablo", "Sánchez-Núñez", email = "psancheznunez@outlook.com",
+           role = c("aut", "cre", "cph"), comment = c(ORCID = "0000-0001-7845-9506"))
+Description: Central catalogue and shared conventions for a set of
+    independent, interoperable tools that study research: research
+    indicators, narrative CVs, academic careers, AI use in research, science
+    communication and the integrity and reproducibility of research outputs.
+    Lists the tools with their domain, maturity and release status; reports
+    which of them are installed; validates and normalises persistent
+    identifiers (DOI, ORCID iD, ROR ID); harmonises the result statuses the
+    tools use, so that an unverifiable result is never read as a negative
+    one; and writes a machine-readable provenance manifest for any analysis.
+    Every tool remains usable on its own.
+License: MIT + file LICENSE
+URL: https://github.com/pablosancheznunez/metascience
+BugReports: https://github.com/pablosancheznunez/metascience/issues
+Depends:
+    R (>= 4.1.0)
+Imports:
+    jsonlite,
+    utils
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Encoding: UTF-8
+Language: en-GB
+Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.1.1

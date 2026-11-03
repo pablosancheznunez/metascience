@@ -1,0 +1,14 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.github$
+^CONTRIBUTING\.md$
+^CITATION\.cff$
+^_pkgdown\.yml$
+^pkgdown$
+^docs$
+^doc$
+^Meta$
+^templates$
+^README\.Rmd$
+^_site$
+^README\.md$
