@@ -16,7 +16,7 @@ Status: **prototype** (not yet released).
 | | [forsci](https://github.com/pablosancheznunez/forsci) | Forensic scientometrics and paper mills: signals, never accusations | prototype | – |
 | Reproducibility and quality | [reproimage](https://github.com/pablosancheznunez/reproimage) | Integrity and provenance checks for scientific images | implemented | submitted |
 | | [REPRO2IMPACT](https://github.com/pablosancheznunez/repro2impact) | Reproducibility indicators and impact: research project | prototype | – |
-| | researchreproducibility | Reproducibility audits of projects and articles | planned | – |
+| | [researchreproducibility](https://github.com/pablosancheznunez/researchreproducibility) | Reproducibility audits of projects and articles | prototype | – |
 | Infrastructure | [research-tools-ops](https://github.com/pablosancheznunez/research-tools-ops) | Shared CI, CRAN watch and releases | implemented | – |
 | | metascience | This package | prototype | – |
 

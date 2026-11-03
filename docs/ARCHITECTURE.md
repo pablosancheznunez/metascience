@@ -18,7 +18,7 @@
                      │ same catalogues, same expected outputs
    ┌─────────────────┴──────────────────────────────┐
    R packages:  openresearchmetrics · narrativecv · academiccareer · aitrail
-                scicomm · reproimage · forsci · researchreproducibility*
+                scicomm · reproimage · forsci · researchreproducibility
                      │ depend on (new code only)
                 metascience: catalogue · identifiers · vocabularies · manifest
                      │
@@ -36,7 +36,7 @@
 | `openresearchmetrics` | existing; `r/` added | Same pattern as narrativecv and reproimage: web tool and R package side by side. |
 | `narrative-cv-crosswalk`, `academiccareer`, `aitrail`, `scicomm`, `reproimage` | existing, frozen | Unchanged. |
 | `forsci` | new (local) | Distinct methods, distinct ethical safeguards: its own package. Paper mills as a module inside. |
-| `researchreproducibility` | Phase 2 | Extracted from repro2impact's detectors. |
+| `researchreproducibility` | new (local) | Extracted from repro2impact's detectors. |
 | `research-tools-ops` | existing | Extended in Phase 5. |
 
 **Not created**, to avoid empty repositories (rule 13): `metascience-web` (the portal starts in `metascience/site` and moves out only if it grows a build of its own), `metascience-docs` (docs live here), `metascience-data` and `metascience-benchmarks` (cases live in each package's tests until at least two packages share one), `aiinresearch` and `scicom` (aitrail and scicomm fill them). A GitHub organisation is not needed while one person maintains everything; moving repositories later keeps redirects.
@@ -52,7 +52,7 @@
 | 1 | CI for metascience | Implemented, not yet run on GitHub (repository not created) |
 | 1 | Portal foundation (pkgdown site from catalogue) | Planned |
 | 2 | forsci with paper mills module | Prototype: 66 tests, R CMD check clean (1 expected NOTE); validated on simulated benchmark only |
-| 2 | researchreproducibility | Planned |
+| 2 | researchreproducibility | Prototype: 66 tests, R CMD check clean (1 expected NOTE); detectors identical to repro2impact 1.1.0 |
 | 3 | AI policy/disclosure corpus analysis (module) | Planned |
 | 3 | Research assessment integration (shared vocabulary) | Started: `ms_harmonise_status()` |
 | 4 | Shiny interfaces per tool, linked from the portal | Planned |

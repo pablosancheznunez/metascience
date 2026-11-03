@@ -1,5 +1,5 @@
 {
-  "vocabulary_version": "0.1.0",
+  "vocabulary_version": "0.2.0",
   "vocabularies": {
     "result_status": {
       "description": "Common status of a result, whatever tool produced it. It records what the sources allowed to be said, never a judgement of the researcher or the output.",
@@ -7,12 +7,14 @@
         {"id": "reported", "definition": "The sources answered and the result is reported with its evidence.", "may_be_read_as": "A result, within the coverage of the sources consulted."},
         {"id": "absent_in_sources", "definition": "The sources answered and contain nothing relevant.", "may_be_read_as": "Not found in these sources. Never proof that the practice or contribution does not exist."},
         {"id": "unverifiable", "definition": "A source failed or there was nothing to count, so the result cannot be established.", "may_be_read_as": "Unknown. Never zero, never no."},
-        {"id": "not_automatable", "definition": "No infrastructure can document this; only the person or a human assessor can.", "may_be_read_as": "Requires narrative or expert evidence."}
+        {"id": "not_automatable", "definition": "No infrastructure can document this; only the person or a human assessor can.", "may_be_read_as": "Requires narrative or expert evidence."},
+        {"id": "not_applicable", "definition": "The check does not apply to this case (for example random seeds in code without randomness).", "may_be_read_as": "Neither a strength nor a gap."}
       ],
       "mappings": {
         "openresearchmetrics": {"computed": "reported", "unverifiable": "unverifiable"},
         "narrativecv": {"found": "reported", "partial": "reported", "not_found_in_sources": "absent_in_sources", "source_unavailable": "unverifiable", "no_automated_source": "not_automatable"},
-        "repro2impact": {"yes": "reported", "no": "absent_in_sources", "unverifiable": "unverifiable"}
+        "repro2impact": {"yes": "reported", "no": "absent_in_sources", "unverifiable": "unverifiable"},
+        "researchreproducibility": {"yes": "reported", "no": "absent_in_sources", "met": "reported", "not_met": "absent_in_sources", "not_applicable": "not_applicable", "unverifiable": "unverifiable"}
       }
     },
     "evidence_level": {

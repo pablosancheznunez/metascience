@@ -172,13 +172,13 @@
       "kind": ["r-package"],
       "role": "Reproducibility audits of research projects and articles: data and code availability, environment and dependency reporting, provenance and checklists.",
       "r_package": "researchreproducibility",
-      "repository": null,
+      "repository": "https://github.com/pablosancheznunez/researchreproducibility",
       "url": null,
       "doi": null,
-      "maturity": "planned",
+      "maturity": "prototype",
       "cran": "not_submitted",
       "frozen": false,
-      "notes": "Phase 2. Starts from the repro2impact detectors and builds on existing tools (renv, sessioninfo, RO-Crate) instead of re-implementing them."
+      "notes": "Project audit (14-item checklist with references), template and GitHub Action; article detectors ported unchanged from repro2impact (version 1.1.0)."
     },
     {
       "id": "metascience-benchmarks",
